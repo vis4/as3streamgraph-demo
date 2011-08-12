@@ -28,7 +28,7 @@
 			</HBox>
 			<HBox spacing="3">
 				<Label text="Random Seed" />
-				<InputText height="18" y="1" width="40" id="seed" text="23" />
+				<InputText height="18" y="1" width="40" id="seed" text="9478" />
 			</HBox>
 			<PushButton label="RANDOMIZE" id="randomize" />
 		</HBox>

@@ -78,7 +78,7 @@ package
 			
 			var cdata:ComboBox = ComboBox(ui.getCompById('data'));
 			cdata.items = ['Late Onset', 'Believable']; 
-			cdata.selectedIndex = 0;
+			cdata.selectedIndex = 1;
 			cdata.addEventListener(Event.SELECT, renderStreamgraph);
 			
 			InputText(ui.getCompById('seed')).addEventListener(Event.CHANGE, renderStreamgraph);
@@ -149,7 +149,9 @@ package
 			switch (ComboBox(ui.getCompById('coloring')).selectedIndex) {
 				case 0: return new LastFMColorPicker('assets/layers-nyt.jpg');
 				case 1: return new LastFMColorPicker('assets/layers.jpg');
-				case 2: return new RandomColorPicker(seed);
+				case 2:
+					var h:Number = Random.float(60, 300);
+					return new RandomColorPicker(seed, h, Random.float(h, h+70));
 			}
 			throw new Error('unknown coloring');
 		}
