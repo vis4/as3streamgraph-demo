@@ -2,6 +2,7 @@ package
 {
 	import com.bit101.components.ComboBox;
 	import com.bit101.components.InputText;
+	import com.bit101.components.Label;
 	import com.bit101.utils.MinimalConfigurator;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -36,6 +37,7 @@ package
 	public class Main extends Sprite 
 	{
 		protected var ui:MinimalConfigurator;
+		protected var credits:Label;
 		
 		public function Main():void 
 		{
@@ -45,6 +47,16 @@ package
 			ui = new MinimalConfigurator(this);
 			ui.addEventListener(Event.COMPLETE, onUIComplete);
 			ui.loadXML('ui.xml');
+			
+			credits = new Label(this, 10, stage.stageHeight - 60, 'STREAMGRAPH DEMO\nOriginal implementation by Lee Byron and Martin Wattenberg.\nSource: https://github.com/gka/as3streamgraph-demo');
+			
+			stage.addEventListener(Event.RESIZE, onResize);
+		}
+		
+		protected function onResize(e:Event):void 
+		{
+			credits.y = stage.stageHeight - 60;
+			renderStreamgraph();
 		}
 		
 		protected function onUIComplete(e:Event):void 
