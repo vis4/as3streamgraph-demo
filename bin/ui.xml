@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<comp>
+	<Panel width="2500" x="-3" y="-3" height="45">
+		<HBox x="12" y="14" spacing="10">
+			<HBox spacing="3">
+				<Label text="Layout" />
+				<ComboBox id="layout" numVisibleItems="4" />
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Data" />
+				<ComboBox id="data" numVisibleItems="2" />
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Layers" />
+				<InputText height="18" y="1" width="30" id="numLayers" text="50" />
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Size" />
+				<InputText height="18" y="1" width="30" id="layerSize" text="200" />
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Ordering" />
+				<ComboBox id="ordering" numVisibleItems="5"/>
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Coloring" />
+				<ComboBox id="coloring" numVisibleItems="3" />
+			</HBox>
+			<HBox spacing="3">
+				<Label text="Random Seed" />
+				<InputText height="18" y="1" width="40" id="seed" text="23" />
+			</HBox>
+			<PushButton label="RANDOMIZE" id="randomize" />
+		</HBox>
+
+	</Panel>
+</comp>

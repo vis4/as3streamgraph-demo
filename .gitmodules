@@ -1,0 +1,6 @@
+[submodule "lib/as3streamgraph"]
+	path = lib/as3streamgraph
+	url = git@github.com:gka/as3streamgraph.git
+[submodule "lib/minimalcomps"]
+	path = lib/minimalcomps
+	url = git@github.com:gka/minimalcomps.git
